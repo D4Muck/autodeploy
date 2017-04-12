@@ -27,6 +27,7 @@ var server = http.createServer(function (request, response) {
     } catch (e) {
         response.writeHead(500, {"Content-Type": "text/plain"});
         response.write('error' + e.message);
+        response.end();
     }
 });
 
